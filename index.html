@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="container" id="page-1">
+                <h1>Song Finder</h1>
+                <p>Submit some lyrics and then we'll prompt you for an artist.</p>
+                <div class="search">
+                    <input class="query" id="input-lyrics" placeholder="e.g. Party rock is in the house tonight" value=""></input>
+                    <div class="submit" id="submit-lyrics" style="display:none;"></div>
+                </div>
+            </div>
+            <div class="container" id="page-2" style="display:none;">
+                <h1>Name your artist.</h1>
+                <p>Unfortunately, we can't pull your lyrics out of thin air.</p>
+                <div class="search">
+                    <input class="query" id="input-artist" placeholder="e.g. LMFAO" value=""></input>
+                    <div class="submit" id="submit-artist"></div>
+                </div>
+                <div class="options" style="display:default;">
+                    <div class="option" onclick="document.getElementById('input-artist').value='Anderson .Paak'"    >
+                        <div class="icon" style='background-image: url("https://i.scdn.co/image/eb14d305790380b432a6ca7ace3155f7ef2b78d5");'></div>
+                        <div class="artist-info">
+                            <h3>Anderson .Paak</h3>
+                            <p>R&B/Soul</p>
+                        </div>
+                        <div class="artist-socials">
+                            <div class="spotify" onclick="window.open('https://open.spotify.com/artist/3jK9MiCrA42lLAdMGUZpwa?si=-8Krypg-QXWcpC0EBnQY5g')"></div>
+                            <div class="soundcloud" onclick="window.open('https://soundcloud.com/andersonpaak')"></div>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="icon" style='background-image: url("https://i.scdn.co/image/80109a31021dd821ae66d6d47ca2af399463a56c");'></div>
+                        <div class="artist-info">
+                            <h3>A$AP Rocky</h3>
+                            <p>Hip-Hop/Rap</p>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <div class="icon" style='background-image: url("https://i.scdn.co/image/b7e2132463e4f14047ffec8d20e8e310b4693f20");'></div>
+                        <div class="artist-info">
+                            <h3>Aminé</h3>
+                            <p>Hip-Hop/Rap</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="page-3">
+                <h1>Results...</h1>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Graphics from <a href="https://www.flaticon.com/authors/kiranshastry/">flaticon.com</a> and <a href="https://loading.io/">loading.io</a></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    color:  #fff;
+    background-color: #41B3A3;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+input {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+}
+
+#wrapper {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 300%;
+    height: 85vh;
+    transition: transform .7s cubic-bezier(0.5, 1, 0.89, 1);;
+}
+
+#wrapper > div > h1 {
+    padding-top: 15vh;
+}
+
+.container {
+    overflow-x: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width:  100vw;
+    height: 100%;
+    min-width: 100vw;
+    align-items: center;
+    justify-content: top;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.container h1, p {
+    padding:0;
+    margin:20px;
+}
+
+.search {
+    margin-top: 10px;
+    display: flex;
+    flex-shrink: 0;
+    z-index: 2;
+    width: 70%;
+    height: 40px;
+    max-width: 584px;
+    background-color: #747474;
+    border-radius: 24px;
+    box-shadow: 0px 3px #141414;
+}
+
+.search .submit{
+    z-index: 3;
+    float: right;
+    min-width: 20px;
+    width: 20px;
+    height: 20px;
+    background-image: url("https://i.imgur.com/4g08s2G.png");
+    background-size: cover;
+    margin: 10px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.query {
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    margin: 6px;
+    padding-left: 12px;
+    background: transparent; border: none; outline: none;
+}
+
+.options {
+    z-index: 1;
+    margin-top: -20px;
+    padding-top: 20px;
+    background-color: #575757;
+    width: 70%;
+    max-width: 584px;
+    height: max-content;
+    border-radius: 12px;
+    padding-bottom: 0;
+}
+
+.option {
+    position: default;
+    width: auto;
+    height: min-content;
+    display: flex;
+    flex-flow: column; 
+    flex-direction: row;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    padding-top: 8px;
+    padding-left: 12px;
+    padding-bottom: 8px;
+    border-radius: 12px;
+    box-shadow: 0px 3px #000;
+    transition: background-color 0.5s ease;
+}
+
+.option:hover{
+    background-color: #015b6b;
+}
+
+.option .icon {
+    background-size: cover;
+    border-color: #e8a87c;
+    border-radius: 50%;
+    border-style: solid;
+    box-shadow: 0 0 0 2px #e27d60;
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+}
+
+.option:last-child{
+    border-bottom: none;
+}
+
+.artist-info, .artist-socials {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.artist-info h3, p {
+    padding: 0;
+    margin: 0;
+}
+
+.artist-socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    height: auto;
+    align-items: center;
+    padding-right: 0px;
+}
+
+.artist-socials :nth-child(n){
+    cursor: pointer;
+    background-size: cover;
+    height: 34px;
+    width: 34px;
+    margin-right: 12px;
+    border-radius: 50%;
+}
+
+.artist-socials .spotify{
+    background-image: url("https://hrblog.spotify.com/wp-content/themes/spotify-usa/images/icons/spotify_icon.png");
+}
+
+.artist-socials .soundcloud{
+    background-image: url("https://m.sndcdn.com/_next/static/images/apple-touch-icon-180-893d0d532e8fbba714cceb8d9eae9567.png");
+}
+
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
+  }
